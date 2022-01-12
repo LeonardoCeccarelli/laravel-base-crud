@@ -15,12 +15,13 @@
         @foreach ($data as $item)
             <div class="col">
                 <div class="card">
-                    <img src={{ $item->thumb }} class="card-img-top" alt="comic_image">
+                    <img src={{ $item->thumb ? $item->thumb : "https://www.frosinonecalcio.com/wp-content/uploads/2021/09/default-placeholder.png" }} 
+                         class="card-img-top" alt="comic_image">
                     <div class="card-body">
                       <h5 class="card-title">{{ $item->title }}</h5>
                       <h6>€ {{ $item->price }}</h6>
                       <p class="card-text">{{ $item->description }}</p>
-                      <a href="#" class="btn btn-primary">Leggi tutto</a>
+                      <a href="#" class="btn btn-primary">More Info</a>
                     </div>
                 </div>
             </div>
