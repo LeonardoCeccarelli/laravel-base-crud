@@ -14,7 +14,10 @@ class ComicController extends Controller
      */
     public function index()
     {
-        return view("index");
+
+        $data = Comic::all();
+
+        return view("index", compact("data"));
     }
 
     /**
