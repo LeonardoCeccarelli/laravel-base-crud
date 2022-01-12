@@ -7,8 +7,21 @@
 @endsection
 
 @section('main_content')
+
 <div class="container">
-    <form action="{{ route('store') }}" method="post" class="d-flex align-items-center flex-column">
+
+    @if($errors->any())
+    <div class="alert alert-danger">
+        Ci sono errori nel form:
+        <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+    </div>
+    @endif
+
+    <form action="{{ route('comics.store') }}" method="post" class="d-flex align-items-center flex-column">
         @csrf
 
         <div class="mb-4 w-75">
