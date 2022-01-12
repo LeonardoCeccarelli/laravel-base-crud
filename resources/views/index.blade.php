@@ -15,10 +15,11 @@
         @foreach ($data as $item)
             <div class="col">
                 <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src={{ $item->thumb }} class="card-img-top" alt="comic_image">
                     <div class="card-body">
                       <h5 class="card-title">{{ $item->title }}</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h6>€ {{ $item->price }}</h6>
+                      <p class="card-text">{{ $item->description }}</p>
                       <a href="#" class="btn btn-primary">Leggi tutto</a>
                     </div>
                 </div>
