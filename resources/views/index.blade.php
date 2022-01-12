@@ -11,6 +11,7 @@
 @section('main_content')
     
 <div class="container">
+    <a href="{{ route('create') }}" class="btn btn-link mb-5">Aggiungi +</a>
     <div class="row row-cols-4 g-3">
         @foreach ($data as $item)
             <div class="col">
@@ -21,7 +22,7 @@
                       <h5 class="card-title">{{ $item->title }}</h5>
                       <h6>€ {{ $item->price }}</h6>
                       <p class="card-text">{{ $item->description }}</p>
-                      <a href="#" class="btn btn-primary">More Info</a>
+                      <a href="{{ route('show', $item->id) }}" class="btn btn-primary">More Info</a>
                     </div>
                 </div>
             </div>
