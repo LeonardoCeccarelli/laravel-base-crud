@@ -10,12 +10,12 @@
 
 @section('main_content')
     
-<div class="container">
+<div class="container mb-5">
     <a href="{{ route('comics.create') }}" class="btn btn-link mb-5">Aggiungi +</a>
     <div class="row row-cols-4 g-3">
         @foreach ($data as $item)
             <div class="col">
-                <div class="card">
+                <div class="card h-100">
                     <img src={{ $item->thumb ? $item->thumb : "https://www.frosinonecalcio.com/wp-content/uploads/2021/09/default-placeholder.png" }} 
                          class="card-img-top" alt="comic_image">
                     <div class="card-body">
