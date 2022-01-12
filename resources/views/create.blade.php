@@ -9,6 +9,7 @@
 @section('main_content')
 
 <div class="container">
+    <small class="d-block mb-5"><a href="{{ route("comics.index") }}"><- Ritorna a Lista Fumetti</a></small>
 
     @if($errors->any())
     <div class="alert alert-danger">
