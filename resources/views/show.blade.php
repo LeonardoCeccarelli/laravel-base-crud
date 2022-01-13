@@ -16,5 +16,7 @@
         <h5 class="mb-3">Data di uscita: {{ $comic->sale_date }}</h5>
         <h6 class="mb-3">Serie: {{ $comic->series }}</h6>
         <h6 class="mb-3">Genere: {{ $comic->type }}</h6>
+
+        <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-sm btn-success my-2">Change</a>
     </div>
 @endsection

@@ -22,9 +22,11 @@
                       <h5 class="card-title">{{ $item->title }}</h5>
                       <h6>€ {{ $item->price }}</h6>
                       <p class="card-text mb-5">{{ mb_strimwidth($item->description, 0 , 100, "...") }}</p>
-                      <div class="position-absolute bottom-0 start-0 px-3 pb-2">
+                      <div class="position-absolute bottom-0 start-0 px-3 pb-2 d-flex justify-content-evenly w-100">
                         <a href="{{ route('comics.show', $item->id) }}" class="btn btn-sm btn-primary">More</a>
                         <a href="{{ route('comics.edit', $item->id) }}" class="btn btn-sm btn-success">Change</a>
+
+                        @include("partials.form_btn_delete", ["comic" => $item])
                       </div>
                     </div>
                 </div>
