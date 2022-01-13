@@ -19380,7 +19380,20 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-console.log("ciaooo");
+window.addEventListener("DOMContentLoaded", function () {
+  var formsDelete = document.querySelectorAll(".form_delete");
+  formsDelete.forEach(function (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var comicTitle = form.comicTitle;
+      var result = confirm("Sei sicuro di voler cancellare l'elemento \"".concat(comicTitle.value.slice(0, 20), "...\" ? L'operazione sar\xE0 irreversibile"));
+
+      if (result) {
+        form.submit();
+      }
+    });
+  });
+});
 
 /***/ }),
 
