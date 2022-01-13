@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
             const comicTitle = form.comicTitle
 
-            const result = confirm(`Sei sicuro di voler cancellare l'elemento "${comicTitle.value.slice(0, 20)}..." ? L'operazione sarà irreversibile`)
+            const result = confirm(`Sei sicuro di voler cancellare l'elemento "${comicTitle.value.slice(0, 20)}..." ? L'operazione sarà irreversibile!`)
 
             if (result) {
                 form.submit()

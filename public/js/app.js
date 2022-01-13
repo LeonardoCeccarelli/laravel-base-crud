@@ -19386,7 +19386,7 @@ window.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var comicTitle = form.comicTitle;
-      var result = confirm("Sei sicuro di voler cancellare l'elemento \"".concat(comicTitle.value.slice(0, 20), "...\" ? L'operazione sar\xE0 irreversibile"));
+      var result = confirm("Sei sicuro di voler cancellare l'elemento \"".concat(comicTitle.value.slice(0, 20), "...\" ? L'operazione sar\xE0 irreversibile!"));
 
       if (result) {
         form.submit();
