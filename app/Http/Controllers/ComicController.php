@@ -40,7 +40,7 @@ class ComicController extends Controller
     {
         $request->validate([
             "title" => "required|max:255",
-            "description" => "required|max:400",
+            "description" => "required|max:5000",
             "thumb" => "max:255",
             "price" => "required|numeric|between:0,9999.99",
             "sale_date" => "date",
@@ -93,7 +93,7 @@ class ComicController extends Controller
     {
         $request->validate([
             "title" => "required|max:255",
-            "description" => "required|max:400",
+            "description" => "required|max:5000",
             "thumb" => "max:255",
             "price" => "required|numeric|between:0,9999.99",
             "sale_date" => "date",
