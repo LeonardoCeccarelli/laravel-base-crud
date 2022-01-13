@@ -1,9 +1,9 @@
 @extends('layouts.default_layout')
 
-@section('page_title', "Dettagli " . $comic->title)
+@section('page_title', "Dettagli - " . $comic->title)
 
 @section('header_content')
-    <h1 class="text-center my-4 text-info">Descrizione {{ $comic->title }}</h1>
+    <h1 class="text-center my-4 text-info">{{ $comic->title }}</h1>
 @endsection
     
 @section('main_content')

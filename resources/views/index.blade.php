@@ -21,8 +21,11 @@
                     <div class="card-body">
                       <h5 class="card-title">{{ $item->title }}</h5>
                       <h6>€ {{ $item->price }}</h6>
-                      <p class="card-text">{{ mb_strimwidth($item->description, 0 , 100, "...") }}</p>
-                      <a href="{{ route('comics.show', $item->id) }}" class="btn btn-primary">More Info</a>
+                      <p class="card-text mb-5">{{ mb_strimwidth($item->description, 0 , 100, "...") }}</p>
+                      <div class="position-absolute bottom-0 start-0 px-3 pb-2">
+                        <a href="{{ route('comics.show', $item->id) }}" class="btn btn-sm btn-primary">More</a>
+                        <a href="{{ route('comics.edit', $item->id) }}" class="btn btn-sm btn-success">Change</a>
+                      </div>
                     </div>
                 </div>
             </div>
