@@ -28,7 +28,8 @@
         <div class="mb-4 w-75">
             <label for="field_title" class="form-label">Titolo</label>
             <input type="text" class="form-control {{ $errors->has("title") ? 'is-invalid' : '' }}" 
-             name="title" id="field_title">
+             name="title" id="field_title"
+             value="{{ old("title") }}">
 
             @if($errors->has("title"))
             <div class="invalid-feedback">
@@ -40,7 +41,8 @@
         <div class="mb-4 w-75">
             <label for="field_description" class="form-label">Descrizione</label>
             <input type="text" class="form-control {{ $errors->has("description") ? 'is-invalid' : '' }}" 
-             name="description" id="field_description">
+             name="description" id="field_description"
+             value="{{ old("description") }}">
 
             @if($errors->has("description"))
             <div class="invalid-feedback">
@@ -52,7 +54,8 @@
         <div class="mb-4 w-75">
             <label for="field_thumb" class="form-label">Link Immagine</label>
             <input type="text" class="form-control {{ $errors->has("thumb") ? 'is-invalid' : '' }}" 
-             name="thumb" id="field_thumb">
+             name="thumb" id="field_thumb"
+             value="{{ old("thumb") }}">
 
             @if($errors->has("thumb"))
             <div class="invalid-feedback">
@@ -65,7 +68,8 @@
             <div class="w-50">
                 <label for="field_price" class="form-label">Prezzo</label>
                 <input type="number" step="0.01" class="form-control {{ $errors->has("price") ? 'is-invalid' : '' }}" 
-                 name="price" id="field_price" placeholder="€">
+                 name="price" id="field_price" placeholder="€"
+                 value="{{ old("price") }}">
 
                 @if($errors->has("price"))
                 <div class="invalid-feedback">
@@ -77,7 +81,8 @@
             <div class="w-50 ps-2">
                 <label for="field_sale_date" class="form-label">Data di Vendita</label>
                 <input type="date" class="form-control {{ $errors->has("sale_date") ? 'is-invalid' : '' }}" 
-                 name="sale_date" id="field_sale_date">
+                 name="sale_date" id="field_sale_date"
+                 value="{{ old("sale_date") }}">
 
                 @if($errors->has("sale_date"))
                 <div class="invalid-feedback">
@@ -91,7 +96,8 @@
             <div class="w-50">
                 <label for="field_series" class="form-label">Numero Serie</label>
                 <input type="text" class="form-control {{ $errors->has("series") ? 'is-invalid' : '' }}" 
-                 name="series" id="field_series">
+                 name="series" id="field_series"
+                 value="{{ old("series") }}">
 
                 @if($errors->has("series"))
                 <div class="invalid-feedback">
@@ -103,7 +109,8 @@
             <div class="w-50 ps-2">
                 <label for="field_type" class="form-label">Genere</label>
                 <input type="text" class="form-control {{ $errors->has("type") ? 'is-invalid' : '' }}" 
-                 name="type" id="field_type">
+                 name="type" id="field_type"
+                 value="{{ old("type") }}">
 
                 @if($errors->has("type"))
                 <div class="invalid-feedback">
